@@ -1,10 +1,14 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import Tetris from './components/Tetris';
+import { THEME, GlobalStyle } from './utils/styles';
 
 const App = () => {
   return (
-    <div>
-      <h1>App</h1>
-    </div>
+    <ThemeProvider theme={THEME}>
+      <GlobalStyle />
+      <Tetris />
+    </ThemeProvider>
   );
 };
 
